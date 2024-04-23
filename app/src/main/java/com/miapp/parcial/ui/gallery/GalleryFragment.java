@@ -35,13 +35,11 @@ public class GalleryFragment extends Fragment {
         mv.getListaMutableLiveData().observe(getViewLifecycleOwner(), new Observer<List<Turismo>>() {
             @Override
             public void onChanged(List<Turismo> turismos) {
-                if (turismos != null) {
+
                     TurismoAdapter adapter = new TurismoAdapter(turismos, requireContext(), getLayoutInflater());
                     RecyclerView rc = binding.lista;
                     rc.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
-                    rc.setAdapter(adapter);                } else {
-                    // Manejar la lista nula o vacía
-                }
+                    rc.setAdapter(adapter);
             }
         });
 

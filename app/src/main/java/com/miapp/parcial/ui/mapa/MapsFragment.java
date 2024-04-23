@@ -36,13 +36,7 @@
         private OnMapReadyCallback callback = new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap map) {
-                googleMap = map; // Almacena la referencia al mapa
-                // Configura el mapa aquí
-
-                // Agregar marcador personalizado
-
-
-                // Iniciar la lectura permanente después de que el mapa esté listo
+                googleMap = map;
                 mViewModel.lecturaPermanente();
             }
         };
